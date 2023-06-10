@@ -1,0 +1,23 @@
+@use "variables";
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Space Mono", monospace;
+    background-color: variables.$quartenaryBlue;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "github-devfinder",
+  "version": "1.0.0",
+  "description": "Devfinder application from the Frontend Mentor challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GillyRabutTsurwa/github-devfinder.git"
+  },
+  "keywords": [
+    "frontend-mentor",
+    "github",
+    "devfinder",
+    "api",
+    "gulp",
+    "typescript"
+  ],
+  "author": "Gilbert Rabut Tsurwa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GillyRabutTsurwa/github-devfinder/issues"
+  },
+  "homepage": "https://github.com/GillyRabutTsurwa/github-devfinder#readme"
+}

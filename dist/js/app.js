@@ -1,0 +1,1 @@
+"use strict";console.log("ehellofromtypescript");var x="4";

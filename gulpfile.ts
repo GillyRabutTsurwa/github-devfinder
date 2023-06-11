@@ -5,7 +5,8 @@ const cleanCSS = require("gulp-clean-css");
 const browserSync = require("browser-sync").create();
 const babel = require("gulp-babel");
 const uglify = require("gulp-uglify");
-const ts = require("gulp-typescript");
+const typeScript = require("gulp-typescript");
+const tsProject = typeScript.createProject("tsconfig.json");
 
 function minifyHTML() {
     return gulp
@@ -32,18 +33,24 @@ function compileTS() {
     return (
         gulp
             .src("./src/ts/app.ts")
-            .pipe(
-                ts({
-                    noImplicitAny: true,
-                    outFile: "app.js",
-                })
-            )
+            .pipe(tsProject())
+            // .pipe(
+            //     tsProject({
+            //         outDir: "dist/js",
+            //         target: "es6",
+            //         noImplicitAny: true,
+            //         module: "es2015",
+            //         // moduleResolution: "nodenext",
+            //         moduleResolution: "node",
+            //     })
+            // )
+
             // TESTING: trying a ting
-            .pipe(
-                babel({
-                    presets: ["@babel/preset-env"],
-                })
-            )
+            // .pipe(
+            //     babel({
+            //         presets: ["@babel/preset-env"],
+            //     })
+            // )
             .pipe(uglify())
             .pipe(gulp.dest("./dist/js"))
     );
@@ -69,7 +76,7 @@ function watch() {
         browser: "firefox",
     });
 
-    gulp.watch(["./src/*.html", "./src/sass/**/*.scss", "./src/js/app.js"], gulp.parallel(minifyHTML, style, compileTS, configureJS));
+    gulp.watch(["./src/*.html", "./src/sass/**/*.scss", "./src/ts/app.ts"], gulp.parallel(minifyHTML, style, compileTS, configureJS));
 
     gulp.watch("./src/*.html").on("change", browserSync.reload);
     gulp.watch("./src/js/app.js").on("change", browserSync.reload);

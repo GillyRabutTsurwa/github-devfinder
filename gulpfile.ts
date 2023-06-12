@@ -68,6 +68,10 @@ function configureJS() {
         .pipe(gulp.dest("./dist/js"));
 }
 
+function copyAssets() {
+    return gulp.src("./src/assets/**/*").pipe(gulp.dest("./dist/assets"));
+}
+
 function watch() {
     browserSync.init({
         server: {
@@ -88,4 +92,5 @@ exports.minifyHTML = minifyHTML;
 exports.style = style;
 exports.compileTS = compileTS;
 exports.configureJS = configureJS;
+exports.copyAssets = copyAssets;
 exports.watch = watch;

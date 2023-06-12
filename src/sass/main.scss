@@ -18,6 +18,15 @@ body {
         justify-content: space-between;
         background-color: #141d2f;
         padding: 5rem 0;
+
+        .light-dark-status {
+            display: inline-flex;
+            align-items: center;
+
+            img {
+                margin-left: 1rem;
+            }
+        }
     }
 
     .search {
@@ -35,6 +44,16 @@ body {
             font-family: inherit;
             text-transform: capitalize;
             background-color: inherit;
+        }
+        &__button {
+            padding: 1rem 2.5rem;
+            background-color: variables.$primaryBlue;
+            outline: none;
+            border: none;
+            font-weight: bold;
+            font-size: 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
         }
     }
 
@@ -83,6 +102,17 @@ body {
                     display: flex;
                     justify-content: space-around;
                 }
+            }
+            &--links {
+                list-style: none;
+                display: grid;
+                grid-template-columns: repeat(2, -webkit-max-content);
+                grid-template-columns: repeat(2, max-content);
+                grid-template-rows: repeat(2, -webkit-max-content);
+                grid-template-rows: repeat(2, max-content);
+                -moz-column-gap: 8rem;
+                column-gap: 8rem;
+                row-gap: 2rem;
             }
         }
     }

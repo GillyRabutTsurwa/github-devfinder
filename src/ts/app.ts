@@ -2,7 +2,7 @@ import { Profile } from "./interfaces/profile";
 
 const DOM = (function () {
     const elements = {
-        input: document.querySelector(".search-input") as HTMLInputElement,
+        input: document.querySelector("#searchInput") as HTMLInputElement,
         para: document.querySelector(".test") as HTMLParagraphElement,
     };
     return elements;

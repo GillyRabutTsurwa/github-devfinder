@@ -15,7 +15,42 @@
 </head>
 
 <body>
-    <input type="text" name="Search" id="searchInput" class="search-input" placeholder="Search GitHub Username...">
+    <div class="container">
+        <div class="top">
+            <h1 class="title">devfinder</h1>
+            <span>Light</span>
+        </div>
+        <div class="search">
+            <input type="text" name="Search" id="searchInput" class="search__input"
+                placeholder="Search GitHub Username...">
+            <button class="search__button">Search</button>
+        </div>
+        <main class="profile">
+            <figure class="profile__img">
+                <img src="https://source.unsplash.com/random/?city,night" alt="">
+            </figure>
+            <div class="profile__info">
+                <div class="name-n-date">
+                    <h2 id="profileTitle" class="profile__info--title">The Octotat</h2>
+                    <span id="joinedAtDate" class="profile__info--date">Joined 25 Jan 2011</span>
+                    <a href="#">@octocat</a>
+                </div>
+                <p class="profile__info--bio">This profile has no bio</p>
+                <div class="profile__info--stats">
+                    <div class="titles">
+                        <h4>Repos</h4>
+                        <h4>Followers</h4>
+                        <h4>Following</h4>
+                    </div>
+                    <div class="numbers">
+                        <h4>8</h4>
+                        <h4>3938</h4>
+                        <h4>19</h4>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
     <p class="test"></p>
 </body>
 
